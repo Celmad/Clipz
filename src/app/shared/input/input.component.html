@@ -18,4 +18,10 @@
   <p *ngIf="control.errors?.['email']" class="text-red-400">
     You must enter a valid email.
   </p>
+  <p *ngIf="control.errors?.['min']" class="text-red-400">
+    Minimum required value is {{ control.errors?.['min']?.min }}.
+  </p>
+  <p *ngIf="control.errors?.['max']" class="text-red-400">
+    Maximum required value is {{ control.errors?.['max']?.max }}.
+  </p>
 </ng-container>
